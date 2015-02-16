@@ -67,15 +67,15 @@ Number *Number::instance()
   return inst;
 }
 
-//int main()
-//{
-//  // 5. Clients may only use the accessor function to manipulate the Singleton
-//  Number::instance()->setValue(42);
-//  cout << "value is " << Number::instance()->getValue() << endl;
-//  Number::setType("octal");
-//  Number::instance()->setValue(64);
-//  cout << "value is " << Number::instance()->getValue() << endl;
-//}
+int main()
+{
+  // 5. Clients may only use the accessor function to manipulate the Singleton
+  Number::instance()->setValue(42);
+  cout << "value is " << Number::instance()->getValue() << endl;
+  Number::setType("octal");
+  Number::instance()->setValue(64);
+  cout << "value is " << Number::instance()->getValue() << endl;
+}
 
 /************************************example 2***********************************/
 /********************************************************************************/
@@ -121,10 +121,10 @@ void bar(void)
   cout << "bar: global_ptr is " << GlobalClass::instance()->get_value() << '\n';
 }
 
-int main()
-{
-  cout << "main: global_ptr is " << GlobalClass::instance()->get_value() << '\n';
-  foo();
-  bar();
-}
+//int main()
+//{
+//  cout << "main: global_ptr is " << GlobalClass::instance()->get_value() << '\n';
+//  foo();
+//  bar();
+//}
 
