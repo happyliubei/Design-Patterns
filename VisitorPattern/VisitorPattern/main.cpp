@@ -88,7 +88,6 @@ class CallVisitor: public Visitor
     {
         c->doSomething();
     }
-
 };
 
 void Red::accept(Visitor *v)
